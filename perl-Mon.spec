@@ -13,7 +13,6 @@ Source: 	ftp://ftp.kernel.org/pub/software/admin/mon/%{realname}-%{version}.tar.
 URL: 		http://www.kernel.org/software/mon/
 BuildRequires:	perl-devel
 BuildArch:	noarch
-BuildRoot: 	%{_tmppath}/%{name}-%{version}-%{release}-root/
 Requires: 	perl
    
 %description
