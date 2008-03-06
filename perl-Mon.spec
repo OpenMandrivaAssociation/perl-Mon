@@ -1,5 +1,5 @@
 %define version	0.11
-%define release	%mkrel 9
+%define release	%mkrel 10
 %define name 	perl-Mon
 %define realname	Mon
 
