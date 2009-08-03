@@ -1,20 +1,18 @@
-%define version	0.11
-%define release	%mkrel 12
-%define name 	perl-Mon
-%define realname	Mon
+%define upstream_name	 Mon
+%define upstream_version 0.11
+
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
 
 Summary:	Perl-Mon module
-Name: 		%{name}
-Version: 	%{version}
-Release: 	%{release}
 License: 	GPL
 Group: 		Development/Perl
-Source: 	ftp://ftp.kernel.org/pub/software/admin/mon/%{realname}-%{version}.tar.bz2
-URL: 		http://www.kernel.org/software/mon/
-BuildRequires:	perl-devel
+Url: 		http://www.kernel.org/software/mon/
+Source0:	ftp://ftp.kernel.org/pub/software/admin/mon/%{upstream_name}-%{upstream_version}.tar.bz2
+
 BuildArch:	noarch
-BuildRoot: 	%{_tmppath}/%{name}-%{version}-%{release}-root/
-Requires: 	perl
+BuildRoot: 	%{_tmppath}/%{name}-%{version}-%{release}
    
 %description
 This is the Perl5 module for interfacing with the Mon system monitoring
@@ -23,7 +21,7 @@ things like special logging routines and persistent monitors are being
 considered.
 
 %prep
-%setup -q -n %{realname}-%{version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -36,13 +34,11 @@ make test
 rm -rf $RPM_BUILD_ROOT
 %makeinstall_std
 
-%files
-%defattr(-,root,root)
-%{perl_vendorlib}/Mon
-%{_mandir}/*/*
-%doc CHANGES  COPYRIGHT COPYING README VERSION
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-
+%files
+%defattr(-,root,root)
+%doc CHANGES  COPYRIGHT COPYING README VERSION
+%{perl_vendorlib}/Mon
+%{_mandir}/*/*
