@@ -4,7 +4,7 @@
 Summary:	Perl-Mon module
 Name:		perl-%{modname}
 Version:	%perl_convert_version %{modver}
-Release:	16
+Release:	17
 License:	GPLv2
 Group:		Development/Perl
 Url:		http://www.kernel.org/software/mon/
