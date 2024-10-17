@@ -7,7 +7,7 @@ Version:	%perl_convert_version %{modver}
 Release:	18
 License:	GPLv2
 Group:		Development/Perl
-Url:		http://www.kernel.org/software/mon/
+Url:		https://www.kernel.org/software/mon/
 Source0:	ftp://ftp.kernel.org/pub/software/admin/mon/%{modname}-%{modver}.tar.bz2
 BuildArch:	noarch
 BuildRequires:	perl-devel
