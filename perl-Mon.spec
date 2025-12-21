@@ -10,6 +10,7 @@ Group:		Development/Perl
 Url:		https://www.kernel.org/software/mon/
 Source0:	ftp://ftp.kernel.org/pub/software/admin/mon/%{modname}-%{modver}.tar.bz2
 BuildArch:	noarch
+BuildRequires:	make
 BuildRequires:	perl-devel
    
 %description
