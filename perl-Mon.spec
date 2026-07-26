@@ -1,14 +1,12 @@
 %define modname	Mon
-%define modver	0.11
-
 Summary:	Perl-Mon module
 Name:		perl-%{modname}
-Version:	%perl_convert_version %{modver}
-Release:	18
+Version:	0.11
+Release:	19
 License:	GPLv2
 Group:		Development/Perl
 Url:		https://www.kernel.org/software/mon/
-Source0:	ftp://ftp.kernel.org/pub/software/admin/mon/%{modname}-%{modver}.tar.bz2
+Source0:	ftp://ftp.kernel.org/pub/software/admin/mon/%{modname}-%{version}.tar.bz2
 BuildArch:	noarch
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -20,7 +18,7 @@ things like special logging routines and persistent monitors are being
 considered.
 
 %prep
-%setup -qn %{modname}-%{modver}
+%setup -qn %{modname}-%{version}
 
 %build
 %__perl Makefile.PL INSTALLDIRS=vendor
